@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "disable_existing_loggers": false,
+  "formatters": {
+    "default": {
+      "format": "%(asctime)s [%(levelname)s] %(module)s %(filename)s(%(lineno)d) %(funcName)s: %(message)s"
+    }
+  },
+  "handlers": {
+    "console": {
+      "class": "logging.StreamHandler",
+      "formatter": "default",
+      "stream": "ext://sys.stdout"
+    },
+    "file": {
+      "class": "logging.handlers.TimedRotatingFileHandler",
+      "formatter": "default",
+      "filename": "logs/output.log",
+      "when": "midnight",
+      "backupCount": 31,
+      "encoding": "utf-8"
+    }
+  },
+  "loggers": {
+    "discord_bot": {
+      "level": "DEBUG",
+      "handlers": [
+        "console",
+        "file"
+      ],
+      "propagate": false
+    },
+    "minecraft": {
+      "level": "DEBUG",
+      "handlers": [
+        "console",
+        "file"
+      ],
+      "propagate": false
+    }
+  }
+}

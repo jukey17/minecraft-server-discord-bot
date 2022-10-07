@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "minecraft-server-discord-bot"
+version = "0.1.0"
+description = ""
+authors = ["jukey17 <keykun.pv@gmail.com>"]
+readme = "README.md"
+packages = [{include = "minecraft_server_discord_bot"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+"discord.py" = "^2.0.1"
+google-cloud-compute = "^1.5.2"
+black = "^22.8.0"
+python-dotenv = "^0.21.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
