@@ -6,7 +6,7 @@ RUN apt-get install screen -y
 ENV WORK_DIR /workspace/discord-bot
 
 RUN mkdir -p $WORK_DIR
-# COPY pyproject.toml poetory.lock $WORK_DIR
+COPY pyproject.toml poetory.lock $WORK_DIR
 WORKDIR $WORK_DIR
 
 COPY pyproject.toml poetry.lock ./
