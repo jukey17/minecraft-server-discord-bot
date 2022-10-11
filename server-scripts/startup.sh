@@ -2,8 +2,8 @@
 
 SESSION_NAME=minecraft
 SERVER_PATH=/mnt/disks/minecraft/server/
-XMX=4096M
-XMS=4096M
+XMX=1G
+XMS=2G
 SERVER_JAR=server.jar
 
 cd $SERVER_PATH || exit
