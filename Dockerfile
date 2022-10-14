@@ -13,3 +13,4 @@ RUN pip install --upgrade pip
 RUN pip install poetry
 RUN poetry install --no-root
 
+ENTRYPOINT screen poetry run python main.py
