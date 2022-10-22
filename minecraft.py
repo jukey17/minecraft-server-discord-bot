@@ -91,7 +91,7 @@ class MinecraftCog(commands.Cog):
 
         logger.debug("starting instance")
         self.start_instance()
-        await interaction.response.send_message(f"{self.SERVER_INSTANCE_NAME} を起動します")
+        await interaction.response.defer()
 
         await self.wait_server_status(self.STATUS_RUNNING)
 
@@ -119,7 +119,7 @@ class MinecraftCog(commands.Cog):
 
         logger.debug("stopping instance")
         self.stop_instance()
-        await interaction.response.send_message(f"{self.SERVER_INSTANCE_NAME} を停止します")
+        await interaction.response.defer()
 
         await self.wait_server_status(self.STATUS_TERMINATED)
 
